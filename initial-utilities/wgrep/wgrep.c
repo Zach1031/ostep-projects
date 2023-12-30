@@ -42,6 +42,10 @@ void searchForTerm(FILE *fp, char *needle) {
       printf("%s", line);
     }
   }
+
+  if (fp != stdin) {
+    fclose(fp);
+  }
 }
 
 int main(int argc, char *argv[]) {
